@@ -20,6 +20,11 @@
         </div>
         <p>{{main.searchInput}}</p>
     </div>
-
+    <h3>A list of TV Shows</h3>
+    <ul>
+      <!-- Add list by using ng-repeat of controller array -->
+      <!-- Show a star by the show if it is a favorite only -->
+      <li class="list-group-item" ng-repeat="show in main.shows"><span class="glyphicon glyphicon-star" ng-if="show.favorite"></span>{{show.title}}<span class="badge">{{show.year}}</span></li>
+    </ul>
   </body>
 </html>
