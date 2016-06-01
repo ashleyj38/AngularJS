@@ -24,7 +24,9 @@
     <ul>
       <!-- Add list by using ng-repeat of controller array -->
       <!-- Show a star by the show if it is a favorite only -->
-      <li class="list-group-item" ng-repeat="show in main.shows | filter:main.searchInput"><span class="glyphicon glyphicon-star" ng-if="show.favorite"></span>{{show.title}}<span class="badge">{{show.year}}</span></li>
+      <!-- Order list items by preference chosen -->
+      <li class="list-group-item" ng-repeat="show in main.shows | filter:main.searchInput | orderBy:main.order.key:main.order.reverse"><span class="glyphicon glyphicon-star" ng-if="show.favorite"></span>{{show.title}}<span class="badge">{{show.year}}</span></li>
     </ul>
+    <select class="form-control pull-right" ng-model="main.order" ng-options="order as order.title for order in main.orders"></select>
   </body>
 </html>

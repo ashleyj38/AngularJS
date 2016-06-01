@@ -4,7 +4,9 @@ angular.module('app').controller("MainController", function(){ //Declare control
   vm.title = 'AngularJS Tutorial Example'; //Declare a variable title attached to the controller
   vm.searchInput = '';
 
-  //Hash variable
+  //Hash variables
+
+  //Show list
   vm.shows = [
     {
       title: 'Game of Thrones',
@@ -27,4 +29,36 @@ angular.module('app').controller("MainController", function(){ //Declare control
       favorite: true
     }
   ];
+
+  //Ordering list
+  vm.orders = [
+    {
+      id:1,
+      title: 'Year Ascending',
+      key: 'year',
+      reverse: false
+    },
+    {
+      id:2,
+      title: 'Year Descending',
+      key: 'year',
+      reverse: true
+    },
+    {
+      id:3,
+      title: 'Title Ascending',
+      key: 'title',
+      reverse: false
+    },
+    {
+      id:4,
+      title: 'Title Descending',
+      key: 'title',
+      reverse: true
+    }
+  ];
+
+  //Variable for order chosen
+  vm.order = vm.orders[0];
+
 });
