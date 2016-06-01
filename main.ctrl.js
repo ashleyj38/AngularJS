@@ -61,4 +61,11 @@ angular.module('app').controller("MainController", function(){ //Declare control
   //Variable for order chosen
   vm.order = vm.orders[0];
 
+vm.new = {};
+
+vm.addShow = function() {
+  vm.shows.push(vm.new);
+  vm.new = {};
+};
+
 });
