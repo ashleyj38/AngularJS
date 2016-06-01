@@ -12,6 +12,13 @@
   <body ng-app="app" ng-controller="MainController as main">
     <div class="container">
         <h1>{{main.title}}</h1> <!-- Use notation to print the controller variable title as h1-->
+        <div class="input-group">
+          <span class="input-group-addon">
+          <span class="glyphicon glyphicon-search"></span>
+        </span>
+        <input type="text" class="form-control" ng-model="main.searchInput"> <!--Bind input to searchInput variable -->
+        </div>
+        <p>{{main.searchInput}}</p>
     </div>
 
   </body>
